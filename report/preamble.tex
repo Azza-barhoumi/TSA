@@ -1,0 +1,72 @@
+% ---------------------------------------------------------------------------
+% Preamble -- Time Series Term Project, Tunis Business School
+% ---------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+
+% ---------------- encoding, language, fonts -------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ---------------- page geometry -------------------------------------------
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\setlength{\parskip}{0.35em}
+\setlength{\parindent}{0pt}
+
+% ---------------- mathematics ---------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+
+% ---------------- tables, figures, lists ----------------------------------
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf,justification=raggedright,singlelinecheck=false]{caption}
+\usepackage{enumitem}
+\usepackage{rotating}
+
+% ---------------- typography and colour -----------------------------------
+\usepackage[table]{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!55!black]{hyperref}
+\usepackage{natbib}
+\bibliographystyle{apalike}
+
+% ---------------- floats that stay put in the pandoc fallback ------------
+\graphicspath{{../reports/figures/}}
+\newcommand{\figdir}{../reports/figures}
+\newcommand{\tabdir}{../reports/tables}
+
+% ---------------- headers / footers ---------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Time Series Analysis and Forecasting --- Term Project}
+\fancyhead[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+
+% ---------------- notation shortcuts --------------------------------------
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\B}{B}
+\newcommand{\yhat}{\hat{y}}
+\newcommand{\pihi}{\phi}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% ---------------- report metadata ----------------------------------------
+\newcommand{\reporttitle}{Time Series Modeling and Forecasting of US Consumer Price Inflation}
+\newcommand{\reportsubtitle}{A complete Box--Jenkins analysis of the Kaggle US CPI-U dataset, 1957--2020}
+\newcommand{\course}{Time Series Analysis and Forecasting}
+\newcommand{\institution}{Tunis Business School --- Finance / Business Administration}
+\newcommand{\academicyear}{Academic year 2026/2027}

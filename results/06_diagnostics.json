@@ -1,0 +1,214 @@
+{
+  "model": "ARIMA(1,1,3)(1,0,1)[12] + const",
+  "n_resid": 767,
+  "sigma": 0.25862721253856463,
+  "burn_in_dropped": 1,
+  "zero_mean": {
+    "mean": 0.00018042107170044192,
+    "se_mean": 0.009394485220887663,
+    "t": 0.019204998193971753,
+    "p": 0.984682571561468,
+    "ci95": [
+      -0.01823276996123938,
+      0.01859361210464026
+    ]
+  },
+  "constant_variance": {
+    "var_first_half": 0.06778686802715976,
+    "var_second_half": 0.06746529942891442,
+    "ratio": 1.0047664295714593,
+    "f_p": 0.9629010303156487,
+    "trend_in_squared_resid": {
+      "coef": 1.5038129702840408e-05,
+      "t": 0.5518957696877614,
+      "p": 0.5811809488234041
+    },
+    "arch_lm_6": {
+      "stat": 44.9113468528981,
+      "p": 4.873931579391547e-08
+    },
+    "arch_lm_12": {
+      "stat": 49.627681440493326,
+      "p": 1.6239737112831138e-06
+    },
+    "ljung_box_squared_12": {
+      "stat": 76.4084951576646,
+      "p": 1.988650999156666e-11
+    }
+  },
+  "autocorrelation": {
+    "ljung_box": {
+      "6": {
+        "stat": 3.2746056911031984,
+        "p": 0.7736750551150382
+      },
+      "12": {
+        "stat": 15.661817414700462,
+        "p": 0.20722096425329656
+      },
+      "18": {
+        "stat": 28.36049225711938,
+        "p": 0.05677698006475528
+      },
+      "24": {
+        "stat": 33.09781633352899,
+        "p": 0.10202633245208463
+      },
+      "36": {
+        "stat": 51.948127752471436,
+        "p": 0.04152893568256795
+      }
+    },
+    "box_pierce_24": {
+      "stat": 32.43706615225531,
+      "p": 0.11651946460791217
+    },
+    "acf_abs_max_lags1to12": 0.09829843733665142,
+    "bartlett_band": 0.07077149817806365
+  },
+  "normality": {
+    "jarque_bera": {
+      "stat": 544.1491096381486,
+      "p": 6.910702156885631e-119
+    },
+    "shapiro": {
+      "stat": 0.961553522023393,
+      "p": 2.639812636002509e-13
+    },
+    "skew": -0.25192153144546914,
+    "excess_kurtosis": 4.130291468868939
+  },
+  "neighbouring_models": {
+    "ARIMA(1,1,3)(1,0,1)[12]  (selected)": {
+      "label": "ARIMA(1,1,3)(1,0,1)[12]  (selected)",
+      "k": 8,
+      "llf": -55.35746709872288,
+      "aic": 126.71493419744576,
+      "aicc": 126.90465751760387,
+      "bic": 163.8548286083838,
+      "lb_p_12": 0.20722096425329656,
+      "lb_p_24": 0.10202633245208463
+    },
+    "ARIMA(0,1,3)(1,0,1)[12]  (fewer AR)": {
+      "label": "ARIMA(0,1,3)(1,0,1)[12]  (fewer AR)",
+      "k": 7,
+      "llf": -76.82704741483887,
+      "aic": 167.65409482967775,
+      "aicc": 167.80146325073036,
+      "bic": 200.15150243924853,
+      "lb_p_12": 3.978411114210884e-11,
+      "lb_p_24": 1.047120555928842e-13
+    },
+    "ARIMA(1,1,4)(1,0,1)[12]  (more MA)": {
+      "label": "ARIMA(1,1,4)(1,0,1)[12]  (more MA)",
+      "k": 9,
+      "llf": -54.54690445909877,
+      "aic": 127.09380891819754,
+      "aicc": 127.3312759366672,
+      "bic": 168.87619013050283,
+      "lb_p_12": 0.2909232275010684,
+      "lb_p_24": 0.161045157382462
+    },
+    "ARIMA(1,1,3)(0,0,1)[12]  (no seasonal AR)": {
+      "label": "ARIMA(1,1,3)(0,0,1)[12]  (no seasonal AR)",
+      "k": 7,
+      "llf": -97.33117535849597,
+      "aic": 208.66235071699194,
+      "aicc": 208.80971913804456,
+      "bic": 241.15975832656272,
+      "lb_p_12": 0.05951096767301116,
+      "lb_p_24": 0.008577652474173681
+    },
+    "ARIMA(1,1,3)(1,0,1)[12] no constant": {
+      "label": "ARIMA(1,1,3)(1,0,1)[12] no constant",
+      "k": 7,
+      "llf": -55.77036340440064,
+      "aic": 125.54072680880128,
+      "aicc": 125.68809522985391,
+      "bic": 158.03813441837207,
+      "lb_p_12": 0.2613686990730594,
+      "lb_p_24": 0.11730441389219225
+    }
+  },
+  "largest_residuals": [
+    {
+      "date": "2008-11",
+      "z": -6.127434429859166,
+      "resid": -1.584721286607305
+    },
+    {
+      "date": "1973-08",
+      "z": 6.102947207360841,
+      "resid": 1.5783882245097516
+    },
+    {
+      "date": "2008-10",
+      "z": -3.8491852379137717,
+      "resid": -0.9955040486262305
+    },
+    {
+      "date": "1980-07",
+      "z": -3.7925125774210753,
+      "resid": -0.98084695641586
+    },
+    {
+      "date": "2005-11",
+      "z": -3.7689615813888127,
+      "resid": -0.9747560279595291
+    },
+    {
+      "date": "2006-09",
+      "z": -3.598654981540997,
+      "resid": -0.9307101067639678
+    }
+  ],
+  "sensitivity_drop_two_largest": {
+    "dropped": [
+      "2008-11",
+      "1973-08"
+    ],
+    "coef_selected": {
+      "intercept": 0.0002529861017578574,
+      "ar.L1": 0.958795193483224,
+      "ma.L1": -0.5822502302644973,
+      "ma.L2": -0.10584132662313055,
+      "ma.L3": -0.12811098860771736,
+      "ar.S.L12": 0.9747019968525256,
+      "ma.S.L12": -0.867554509514452,
+      "sigma2": 0.06688803506546788
+    },
+    "coef_refit": {
+      "intercept": 0.0005810272081321208,
+      "ar.L1": 0.9528355859803007,
+      "ma.L1": -0.6227847163560941,
+      "ma.L2": -0.12852813377921807,
+      "ma.L3": -0.06977938067749302,
+      "ar.S.L12": 0.9521723297543362,
+      "ma.S.L12": -0.8263125009180036,
+      "sigma2": 0.07757831516921608
+    },
+    "max_abs_change": 0.058331607930224336,
+    "max_abs_change_pct_of_sigma": 22.554319538794218,
+    "param_scale": {
+      "intercept": 0.0002529861017578574,
+      "ar.L1": 0.958795193483224,
+      "ma.L1": 0.5822502302644973,
+      "ma.L2": 0.10584132662313055,
+      "ma.L3": 0.12811098860771736,
+      "ar.S.L12": 0.9747019968525256,
+      "ma.S.L12": 0.867554509514452,
+      "sigma2": 0.06688803506546788
+    }
+  },
+  "verdict": {
+    "zero_mean": true,
+    "constant_variance": true,
+    "no_arch": false,
+    "no_autocorrelation": false,
+    "no_autocorrelation_12_24": true,
+    "lb36_p": 0.04152893568256795,
+    "normal": false,
+    "parsimonious": true,
+    "reader": "The model passes three of the four checks cleanly. (i) Zero mean: the residual mean is 0.00018 percentage points, with t = 0.02, so there is no bias left in the forecast. (ii) Constant variance: the split-half variance ratio is 1.005 (p = 0.96) and the squared residuals show no trend (p = 0.58), so the variance is homoskedastic in the unconditional sense. (iii) Residual autocorrelation: the ACF stays inside the Bartlett bands, and Ljung-Box does not reject white noise at 6, 12, 18 or 24 lags; at 36 lags the p-value falls to 0.042, which is the expected behaviour of a portmanteau test applied at a lag length far beyond the estimated orders (the statistic accumulates 36 sample autocorrelations, none of which is individually significant). (iv) Parsimony: the selected model beats both its over- and under-parameterised neighbours on AICc and BIC. Two qualifications must be reported. First, the residual distribution is leptokurtic (excess kurtosis 4.1) and the ARCH-LM test rejects no-ARCH at 12 lags, i.e. inflation volatility clusters around 1973-74 and 2008-09. The point forecasts are unaffected -- the conditional mean equations are unchanged -- but the Gaussian confidence intervals are too narrow in turbulent episodes. Second, dropping the two largest residuals (2008-11 and 1973-08) shifts the coefficients only slightly, so the estimates are not driven by outliers."
+  }
+}

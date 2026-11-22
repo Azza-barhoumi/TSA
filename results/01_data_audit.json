@@ -1,0 +1,51 @@
+{
+  "kaggle_dataset": "varpit94/us-inflation-data-updated-till-may-2021",
+  "kaggle_url": "https://www.kaggle.com/datasets/varpit94/us-inflation-data-updated-till-may-2021",
+  "file_in_archive": "US CPI.csv",
+  "raw_path": "data/raw/kaggle_us_cpi_varpit94_raw.csv",
+  "acquisition": "cached local copy",
+  "sha256": "d54f79b82d7f53cd2b1583cf86a4059d484ae175d0af077df0a592f0b3ece33c",
+  "sha256_verified_against_mirror": true,
+  "raw_columns": [
+    "Yearmon",
+    "CPI"
+  ],
+  "raw_rows": 1296,
+  "raw_head": [
+    {
+      "Yearmon": "01-01-1913",
+      "CPI": 9.8
+    },
+    {
+      "Yearmon": "01-02-1913",
+      "CPI": 9.8
+    },
+    {
+      "Yearmon": "01-03-1913",
+      "CPI": 9.8
+    }
+  ],
+  "raw_tail": [
+    {
+      "Yearmon": "01-10-2020",
+      "CPI": 260.388
+    },
+    {
+      "Yearmon": "01-11-2020",
+      "CPI": 260.229
+    },
+    {
+      "Yearmon": "01-12-2020",
+      "CPI": 260.474
+    }
+  ],
+  "n_missing_dates": 0,
+  "n_missing_cpi": 0,
+  "n_duplicate_months": 0,
+  "max_day_gap": 31,
+  "min_day_gap": 28,
+  "is_monthly": true,
+  "first_month": "1913-01-01",
+  "last_month": "2020-12-01",
+  "n_months": 1296
+}

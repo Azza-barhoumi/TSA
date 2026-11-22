@@ -1,0 +1,10 @@
+# Python dependencies for the TSA term project
+# Install with:  python -m venv .venv && .venv/bin/pip install -r requirements.txt
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+statsmodels>=0.14
+matplotlib>=3.8
+pypdf>=3.17
+pypandoc_binary>=1.12
+typst>=0.11
