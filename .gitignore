@@ -8,7 +8,9 @@ __pycache__/
 
 # Typst build by-product (main.pdf and main.tex ARE tracked: they are deliverables)
 report/_*.typ
+slides/_*.typ
 
 # build-time symlinks to ../reports/{figures,tables} created by src/07_build_report.py
 report/figures
 report/tables
+slides/figures

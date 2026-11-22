@@ -164,7 +164,6 @@ def fig_decades(df: pd.DataFrame):
     ax.set_xticks(range(1, len(labels) + 1), labels, fontsize=8)
     ax.set_ylabel("annual inflation (\\%)")
     ax.set_xlabel("decade")
-    ax.set_title("Annual inflation by decade: a sequence of regimes, not a fixed mean")
     ax.legend(fontsize=8)
     fig.tight_layout()
     return savefig(fig, "f17_decades.png")
@@ -186,6 +185,21 @@ def fig_boxcox(bc: dict, cpi: pd.Series):
     ax.set_ylabel("profile log-likelihood")
     ax.set_title("(a) Box-Cox profile likelihood for $P_t$")
     ax.legend(fontsize=7)
+    # standalone copy of panel (a) for the slide deck (single panel, no title)
+    fig_s, ax_s = plt.subplots(figsize=(4.2, 3.0))
+    ax_s.plot(lam, ll, color=COL["data"], lw=1.6)
+    ax_s.axvline(bc["lambda"], color=COL["fit"], lw=1.3,
+                 label=f"$\\hat\\lambda={bc['lambda']:.2f}$")
+    ax_s.axhline(ll.max() - stats.chi2.ppf(0.95, 1) / 2, color=COL["bench"], lw=0.9, ls="--",
+                 label="95\\% cut-off")
+    ax_s.axvspan(bc["ci95"][0], bc["ci95"][1], color=COL["shade"], alpha=0.8, lw=0,
+                 label=f"95\\% interval [{bc['ci95'][0]:.2f}, {bc['ci95'][1]:.2f}]")
+    ax_s.axvline(0, color="k", lw=0.8, ls=":", label="$\\lambda=0$ (the log)")
+    ax_s.set_xlabel("$\\lambda$")
+    ax_s.set_ylabel("profile log-likelihood")
+    ax_s.legend(fontsize=7.5, loc="lower center")
+    fig_s.tight_layout()
+    savefig(fig_s, "f18_boxcox_slide.png")
 
     ax = axes[1]
     ax.hist(cpi, bins=40, color="#dce6f2", edgecolor=COL["data"], linewidth=0.5)

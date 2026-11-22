@@ -3,8 +3,9 @@
 A complete Box–Jenkins analysis of US CPI-U inflation, submitted as the term project
 of *Time Series Analysis and Forecasting* (Tunis Business School).
 
-**The deliverable is [`report/main.pdf`](report/main.pdf)** — a 34-page typeset report.
-The LaTeX source is [`report/main.tex`](report/main.tex).
+**The deliverables are:**
+- [`report/main.pdf`](report/main.pdf) — a 34-page typeset report (source: [`report/main.tex`](report/main.tex))
+- [`slides/main.pdf`](slides/main.pdf) — a 19-slide presentation deck
 
 ## The question
 
@@ -39,8 +40,8 @@ python -m venv .venv
 .venv/bin/python run_all.py
 ```
 
-`run_all.py` runs the seven stages in order (~9 minutes) and rebuilds
-`report/main.pdf` from the LaTeX source. Use `--no-pdf` to skip the PDF.
+`run_all.py` runs the eight stages in order (~9 minutes) and rebuilds both
+`report/main.pdf` and `slides/main.pdf`. Use `--no-pdf` to skip both.
 
 ## Pipeline
 
@@ -53,6 +54,7 @@ python -m venv .venv
 | 5 | `src/05_forecasting.py` | MMSE forecasts, ψ-weight intervals, hold-out accuracy |
 | 6 | `src/06_diagnostics.py` | residual diagnostics, parsimony, sensitivity |
 | 7 | `src/07_build_report.py` | compile `report/main.tex` → `report/main.pdf` |
+| 8 | `src/08_build_slides.py` | build `slides/main.pdf` (numbers injected from `results/`) |
 
 ## Scope
 
@@ -70,9 +72,10 @@ data/raw/            the Kaggle CSV, untouched
 data/processed/      the cleaned analysis series
 src/                 one standalone script per stage
 results/             every number the report cites, as JSON
-reports/figures/     17 figures (PDF/PNG)
+reports/figures/     18 figures (PDF/PNG)
 reports/tables/      13 booktabs tables
 report/              LaTeX source + compiled PDF
+slides/              presentation deck (Typst) + compiled PDF
 ```
 
 ## Note on the PDF build

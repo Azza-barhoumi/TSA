@@ -1,6 +1,6 @@
 """Run the whole pipeline in order and build the report.
 
-    python run_all.py            # everything, including the PDF
+    python run_all.py            # everything, including the PDF and the slides
     python run_all.py --no-pdf   # analysis only
 """
 from __future__ import annotations
@@ -40,6 +40,7 @@ def main() -> None:
         run(script, label)
     if "--no-pdf" not in sys.argv:
         run("07_build_report.py", "Compile the LaTeX report to PDF")
+        run("08_build_slides.py", "Build the presentation deck")
     print("\nAll stages complete.")
 
 
